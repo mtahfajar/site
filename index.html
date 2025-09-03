@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .caption {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #333;
+        }
+        .greeting {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #0077cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="greeting" id="greeting"></div>
+        <img src="images.jpg" alt="Excited Child">
+        <div class="caption">"I'M SO EXCITED YOU'RE HERE!"</div>
+    </div>
+
+    <script>
+        const greeting = document.getElementById('greeting');
+        const hour = new Date().getHours();
+        if (hour < 12) {
+            greeting.textContent = "Good morning! 😊";
+        } else if (hour < 18) {
+            greeting.textContent = "Good afternoon! 👋";
+        } else {
+            greeting.textContent = "Good evening! 🌙";
+        }
+    </script>
+</body>
+</html>
